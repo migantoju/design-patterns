@@ -31,7 +31,6 @@ class Subject(ABC):
         raise NotImplementedError()
 
 
-
 class Observer(ABC):
     @abstractmethod
     def update(self, subject):
@@ -57,7 +56,7 @@ class Motorcyle(Subject):
             observer.update(self)
 
     def change_price(self, price: int):
-        print("The motorcycle price has been changed to {self.price}")
+        print(f"The motorcycle price has been changed to {self.price}")
         self.price = price
         self.notify()
 
@@ -91,15 +90,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
 

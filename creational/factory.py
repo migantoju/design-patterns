@@ -23,7 +23,6 @@ class Adapter(ABC):
         raise NotImplementedError()
 
 
-
 class DjangoAdapter(Adapter):
     def execute(self):
         print("Adapter de Django")
@@ -37,7 +36,6 @@ class KafkaAdapter(Adapter):
 class MongoAdapter(Adapter):
     def execute(self):
         print("Adapter de Mongo")
-
 
 
 def adapter_factory(name: str) -> Adapter:
@@ -61,11 +59,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
 
