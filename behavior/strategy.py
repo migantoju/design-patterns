@@ -13,7 +13,9 @@ class Order:
         else:
             discount = 0
         return self.price - discount
-
+    
+    def __repr__(self):
+        return repr(f"{self.__class__.__name__}")
 
 # create strategies
 def ten_percent_discount(order: Order):
